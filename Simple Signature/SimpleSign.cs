@@ -120,7 +120,7 @@ namespace Simple_Signature
                     Globals.Ribbons.RibbonMail.SignatureGallery.Items.Add(item);
 	            }
                 WebClient webClient = new WebClient();
-                foreach (var item in response.Split(new string[] { "<img alt=\\\"\\\" src=\\\"" }, StringSplitOptions.None))
+                foreach (var item in response.Split(new string[] { "<img alt=\\\"\\\" nosend=\\\"1\\\" src=\\\"" }, StringSplitOptions.None))
                 {
                     if (item.StartsWith(path))
                     {
